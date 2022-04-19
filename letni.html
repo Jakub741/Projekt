@@ -27,23 +27,39 @@
           <li><a class="dropdown-item " href="zimni.html">Zimní období 21/22</a></li> 
           
         </ul>
-      </div> 
-      <form action="/action_page.php">
-        <div class="mb-3 mt-3">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-        <div class="mb-3">
-          <label for="pwd" class="form-label">Password:</label>
-          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
-        </div>
-        <div class="form-check mb-3">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form> 
+      
+    </div> 
+    <div class="mb-3 mt-3">
+      <label for="student" class="form-label">Student: </label>
+      <input class="form-control" list="students" name="student" id="student">
+      <datalist id="students">
+        <option value="Jakub Kindl">
+        <option value="Jakub Richter">
+        <option value="Petr Novák">
+        <option value="Pavel Rychlý">
+      </datalist> 
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="group" class="form-label">Skupina: </label>
+      <input class="form-control" list="groups" name="group" id="group">
+      <datalist id="groups">
+        <option value="22-5KB1">
+        <option value="22-5KB1-C">
+        <option value="22-5ŘLP">
+        <option value="22-5VT-E">
+      </datalist> 
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="subject" class="form-label">Předmět: </label>
+      <input class="form-control" list="subjects" name="subject" id="subject">
+      <datalist id="subjects">
+        <option value="Informatika">
+        <option value="Matematika">
+        <option value="Právo">
+        <option value="Leadership">
+      </datalist> 
+    </div>
+    <a class="btn btn-primary" role = "button" href="prehled.html">Potvrdit</a>
     </div>
 
   </div>
