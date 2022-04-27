@@ -26,7 +26,9 @@ Máme tam předmět, termín, hodnocení a kolik studentů bylo na zkoušce v da
 
 1. Upravit vzhled stránky
 2. Začít využívat prvky z ReactJS
+    Použít funkce a pro každou komponentu(table, button, card)
 3. Upravit tabulku, aby vypadala líp
+
 
 
 
