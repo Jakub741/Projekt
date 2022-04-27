@@ -4,7 +4,7 @@ S využitím knihovny ReactJS vytvořte komponentu pro přehled všech vypsanýc
 Vztáhněte data k učební skupině.
 Potřebná data převezměte z props.
 
-### VERZE ALFA ###
+### VERZE ALFA ### 
 
 Na verzi alfa jsou jen základní HTML prvky s využitím frameworku Bootstrap 5. 
 Vzhled stránky se moc neupravoval, jelikož se využilo css co je zabudovaný v Bootstrapu.
@@ -15,8 +15,18 @@ prehled a prehled.html
 prehled a prehledL.html slouží pro přehled naších vybraných hodnot ze stránky letni.html a zimni.html a u vybrraných předmětů ve zkouškách je odkaz na zápis ke zkoušce.
 zapisL.html a zapisZ.html slouží pro zapsání studenta na vybranou zkoušku. Po potrvzení to vrátí zpátky na přehled
 
-## Co udělat do příští verze?
+
+### VERZE ALFA v.1 ###
+
+Upravil se kód do verze, se kterou budeme pracovat
+Máme stránku index.html, na které, jak je v zadání, je základní vzhled.
+Máme tam předmět, termín, hodnocení a kolik studentů bylo na zkoušce v danéém termínu.
+
+## Co udělat do příští verze (Verze Beta)?
 
 1. Upravit vzhled stránky
-2. Začít využívat prvky z ReactJS, například jak je v "Rozvrhy v1.0", kde po vybraném období nám to načte pole pro vyplnění informací k získání přehledu zkoušek
-3. Vytvořit kalendář s přehledem zkoušek
+2. Začít využívat prvky z ReactJS
+3. Upravit tabulku, aby vypadala líp
+
+
+
