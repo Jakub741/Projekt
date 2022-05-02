@@ -21,7 +21,13 @@
     <div class="col-sm-4">
       <h1>Zkoušky</h1>
         <h3>Letní období 2021/22</h3>
+    </div>
+  </div>
+</div>
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -31,48 +37,66 @@
             Vyber termín
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" >dd.mm.yy</a></li>
-              <li><a class="dropdown-item" >dd.mm.yyy</a></li>
-              <li><a class="dropdown-item" >dd.mm.yyyy</a></li>
+              <li><button type ="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#term_1" >dd.mm.yy</button></li>
+              <li><button type ="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#term_2" >dd.mm.yyy</button></li>
             </ul></td>
-          </div>
-            
+           </div>
           </tr>
-          
         </thead>
-        <tbody>
-          <tr>
-            <th>Student</th>
-            <th>Výsledek</th>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          
-        </tbody>
       </table>
-    </div> 
+    </div>
+    <div class="row">
+      <div class = "col-md-4">
+        <div id="term_1" class="collapse">
+          <table class="table table-bordered">
+            <tbody>
+              <tr>
+                <th>Student</th>
+                <th>Výsledek</th>
+              </tr>
+              <tr>
+                <td>Ota</td>
+                <td>D</td>
+              </tr>
+              <tr>
+                <td>Ota</td>
+                <td>D</td>
+              </tr>
+              <tr>
+                <td>Ota</td>
+                <td>D</td>
+              </tr>
+              <tr>
+                <td>Ota</td>
+                <td>D</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class = "col-md-4">
+        <div id="term_2" class="collapse">
+            <table class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th>Student</th>
+                  <th>Výsledek</th>
+                </tr>
+                <tr>
+                  <td>Franta</td>
+                  <td>B</td>
+                </tr>
+                <tr>
+                  <td>Dana</td>
+                  <td>A</td>
+                </tr>
+              </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   </div>
 </div> 
-
-    
-</div>      
-    
-
-
-
 </body>
 </html>

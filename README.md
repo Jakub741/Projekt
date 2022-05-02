@@ -22,12 +22,28 @@ Upravil se kód do verze, se kterou budeme pracovat
 Máme stránku index.html, na které, jak je v zadání, je základní vzhled.
 Máme tam předmět, termín, hodnocení a kolik studentů bylo na zkoušce v danéém termínu.
 
+#### VERZE ALFA v.2 ###
+
+Ještě jednou se upravil kód, kde se využila třída "collapse". Po výběru termínu vyjede tabulka se studenty a výsledky.
+Výběr termínu je v jedné tabulce a studenti a výsledky v jiné.
+Po konzultaci s p. Štefkem uvidíme, jestli se s touto verzí bude pracovat.
+### ZBYTEČNĚ KOMPLIKOVANÉ, je to třeba zjednodušit
+
+
+
 ## Co udělat do příští verze (Verze Beta)?
 
-1. Upravit vzhled stránky
+1. Upravit vzhled stránky - stále platí
 2. Začít využívat prvky z ReactJS
     Použít funkce a pro každou komponentu(table, button, card)
-3. Upravit tabulku, aby vypadala líp
+    ## UŽ JE TŘBA IMPLEMENTOVAT TEN REACT ABYCHOM SE POHLI
+3. Chceme aby se tabulka přepsala, jakmile klikneme na jiný termín.
+    Momentálně, podle chuti mě, se to zobrazuje horizontálně nebo vertikálně
+    Při horizontálním vzhledu zůstavá tabulka odsazena vpravo a chceme, aby se přepsala.
+    Při vertikálním se zobrazí tabulky pod sebe, ale jakmile zmizne vrchní, tak ta spodní se přesune místo té první.
+    Teď když nad tím tak uvažuji, tak by bylo lepší, aby byli horizontálně, jelikož to bude přehlednější.
+    Ale je třeba použít funkci na přepsaní tabulky, když zmizne ta první.
+
 
 
 
