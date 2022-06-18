@@ -44,7 +44,7 @@ Po konzultaci s p. Štefkem uvidíme, jestli se s touto verzí bude pracovat.
     Teď když nad tím tak uvažuji, tak by bylo lepší, aby byli horizontálně, jelikož to bude přehlednější.
     Ale je třeba použít funkci na přepsaní tabulky, když zmizne ta první.
 
-
+4. Prostě, vole dáme tam jen tu tabulku a na ni použijeme react, jinak to bude moc hardcore!!!!
 
 
 
