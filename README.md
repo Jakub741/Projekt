@@ -50,7 +50,7 @@ Teď je to jednuduché jak facka, ale problém je, že máme tři tabulky. Zní 
     Teď když nad tím tak uvažuji, tak by bylo lepší, aby byli horizontálně, jelikož to bude přehlednější.
     Ale je třeba použít funkci na přepsaní tabulky, když zmizne ta první.
 
-
+4. Prostě, vole dáme tam jen tu tabulku a na ni použijeme react, jinak to bude moc hardcore!!!!
 
 
 
