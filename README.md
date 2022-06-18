@@ -30,6 +30,12 @@ Po konzultaci s p. Štefkem uvidíme, jestli se s touto verzí bude pracovat.
 ### ZBYTEČNĚ KOMPLIKOVANÉ, je to třeba zjednodušit
 
 
+### Verze Beta třeba ###
+
+Po měsíci trápení a nevědění co dělat jsme se do toho konečně pustili. Tlačí na nás čas, tak by nebylo na škodu něco začít dělat.
+Předešlí kód byl opět moc komplikovaný, tak se musel zjdednodušit. Kdybychom pochoppili zadáníí hned ze začátku, tak bychom mmohli pokročit už dřív, ale hrát si s bootstrapem je sice jednoduché, ale nudné. 
+Teď je to jednuduché jak facka, ale problém je, že máme tři tabulky. Zní to komplikovaně, ale snad se to dá jednodučše implementovat. Co mě napadá je použít tři indexy, nebo rooty, či jak se to jmenuje. Ten root dáme mezi prvky z BS (ne bullshit ale bootstrap) a to mezi < col >.
+
 
 ## Co udělat do příští verze (Verze Beta)?
 
