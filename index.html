@@ -9,6 +9,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
 </head>
 
 <body>
@@ -28,39 +37,11 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Termín </th>
-              <td>dd.mm.yyyy</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Student</th>
-              <th>Výsledek</th>
-            </tr>
-            <tr>
-              <td>Franta</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>Šárka</td>
-              <td>E</td>
-            </tr>
-            <tr>
-              <td>Ota</td>
-              <td>A</td>
-            </tr>
-            <tr>
-              <td>Petr</td>
-              <td>C</td>
-            </tr>
-          </tbody>
-        </table>
+      <div id="root">
+
       </div>
-      <div class="col-md-4">
+      
+      <!--<div class="col-md-4">
       <table class="table table-bordered">
         <thead>
           <tr>
@@ -91,8 +72,8 @@
           </tr>
         </tbody>
       </table>
-      </div>
-      <div class="col-md-4">
+      </div>-->
+      <!-- <div class="col-md-4">
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -124,7 +105,126 @@
           </tbody>
         </table>
       </div>
+      -->
+      
   </div>
 </body>
+<script type="text/babel">
+
+
+
+  function THead(props){
+      const columns = props.columnNames.map(
+          (item, index) => (<th key = {index}>{item}</th>)
+      );
+
+      return(
+          <thead>
+              <tr>
+              {columns}
+              </tr>
+          </thead>
+      )
+  }
+  function TableRow(props){
+      const data = props.data;
+      const columns = props.columnKeys.map(
+          (columNames, index) => 
+          (<td key={index}> {data[columNames]} </td>)
+      )
+      return (
+          <tr>{columns}</tr>
+      )
+  }
+  function TBody(props){
+      const data = props.data;
+      const columnKeys = props.columnKeys;
+      const rows = data.map(
+          (dataRow, index) => (
+              <TableRow key={index} data={dataRow} columnKeys={columnKeys}/>)
+      );
+      return(
+          <tbody>
+              {rows}
+          </tbody>
+      )
+  }
+  function Table(props){
+      const data = props.data;
+      const columnNames = props.columnNames;
+      const columnKeys = props.columnKeys;
+  return(
+      <table className="table table-bordered">
+              <THead columnNames = {columnNames}/>
+              <TBody
+                  columnKeys ={columnKeys}
+                  data = {data}
+              />
+            </table>
+  )
+}
+  function EntityLarge(props){
+      const data= props.data;
+      const columnNames = props.columnNames;
+      const columnKeys = props.columnKeys;
+
+      return(
+      
+          <Table data = {data} columnNames = {columnNames} columnKeys = {columnKeys}/>
+          
+      
+  )
+  }
+  function EntityStoryBook(props){
+      const data=[
+          {'name': 'John', 'surname': 'Newbie', 'email': 'john.newbie@email.cz'},
+          {'name': 'Julia', 'surname': 'Meeks', 'email': 'julia.meeks@email.cz'}
+      ];
+      const columnNames = ['Jméno', 'Příjmení', 'Termín', 'Hodnocení', 'Termín', 'Hodnocení','Termín','Hodnocení'];
+      const columnKeys = ['name', 'surname','date1','grade1','date2','grade2','date3','grade3'];
+  return(
+     <EntityLarge
+      data = {data} 
+      columnNames = {columnNames} 
+      columnKeys = {columnKeys}
+      {...props}
+      />
+  )
+  }
+  function Page(props) {
+      const [data, setData] = React.useState([])
+      React.useEffect(
+      () => {
+              const dataFromServer = [
+                  {'name': 'Petr', 'surname': 'Novák','date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'F','date3':'28.07.2022','grade3':'C' },
+                  {'name': 'Jan', 'surname': 'Novotný','date1':'22.06.2022','grade1':'B','date2':'04.07.2022','grade2':'','date3':'28.07.2022','grade3':'' },
+                  {'name': 'Jana', 'surname': 'Novotná', 'date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'C','date3':'28.07.2022','grade3':''}
+              ]
+
+              setData(dataFromServer)
+          }, [props.id]
+      )
+      
+      
+      return(
+          <EntityStoryBook {...props} data={data} />
+      )
+  }
+</script>
+<script type="text/babel">
+  function App(props) {
+      return (
+          <Page id={1}/>
+              )
+  }
+</script>
+
+
+<script type="text/babel">
+  ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+  );
+</script>
 
 </html>
