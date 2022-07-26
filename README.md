@@ -4,6 +4,10 @@ S využitím knihovny ReactJS vytvořte komponentu pro přehled všech vypsanýc
 Vztáhněte data k učební skupině.
 Potřebná data převezměte z props.
 
+data : 
+    předmět, 
+    uč. skupina, 
+    vypsané termíny (studenti co jsou přihlášeni a výsledky), id temrínu, datum a čas, seznam studentů a výsledky (nebo bez výsledku)
 ### VERZE ALFA ### 
 
 Na verzi alfa jsou jen základní HTML prvky s využitím frameworku Bootstrap 5. 

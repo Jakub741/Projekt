@@ -31,6 +31,7 @@
       <div class="col-sm-4">
         <h1>Zkouška</h1>
         <h3>Letní období 2021/22</h3>
+        <h3>Informatika </h3>
       </div>
     </div>
   </div>
@@ -41,74 +42,9 @@
 
       </div>
       
-      <!--<div class="col-md-4">
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Termín </th>
-            <td>dd.mm.yyyy</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>Student</th>
-            <th>Výsledek</th>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-          <tr>
-            <td>Ota</td>
-            <td>D</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>-->
-      <!-- <div class="col-md-4">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Termín </th>
-              <td>dd.mm.yyyy</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>Student</th>
-              <th>Výsledek</th>
-            </tr>
-            <tr>
-              <td>Ota</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>Ota</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>Ota</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>Ota</td>
-              <td>D</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      -->
-      
   </div>
 </body>
+
 <script type="text/babel">
 
 
@@ -164,6 +100,8 @@
   )
 }
   function EntityLarge(props){
+
+     
       const data= props.data;
       const columnNames = props.columnNames;
       const columnKeys = props.columnKeys;
@@ -176,15 +114,16 @@
   )
   }
   function EntityStoryBook(props){
+      
       const data=[
-          {'name': 'John', 'surname': 'Newbie', 'email': 'john.newbie@email.cz'},
-          {'name': 'Julia', 'surname': 'Meeks', 'email': 'julia.meeks@email.cz'}
+          {'name': 'Petr', 'surname': 'Novák','date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'F','date3':'28.07.2022','grade3':'C'},
+          {'name': 'Julia', 'surname': 'Meeks', 'date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'C','date3':'28.07.2022','grade3':''}
       ];
       const columnNames = ['Jméno', 'Příjmení', 'Termín', 'Hodnocení', 'Termín', 'Hodnocení','Termín','Hodnocení'];
       const columnKeys = ['name', 'surname','date1','grade1','date2','grade2','date3','grade3'];
   return(
      <EntityLarge
-      data = {data} 
+      data = {data}
       columnNames = {columnNames} 
       columnKeys = {columnKeys}
       {...props}
@@ -192,14 +131,19 @@
   )
   }
   function Page(props) {
-      const [data, setData] = React.useState([])
+
+    
+    const [data, setData] = React.useState([])
       React.useEffect(
       () => {
               const dataFromServer = [
-                  {'name': 'Petr', 'surname': 'Novák','date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'F','date3':'28.07.2022','grade3':'C' },
+                  {'id':'0','name': 'Petr', 'surname': 'Novák','date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'F','date3':'28.07.2022','grade3':'C' },
                   {'name': 'Jan', 'surname': 'Novotný','date1':'22.06.2022','grade1':'B','date2':'04.07.2022','grade2':'','date3':'28.07.2022','grade3':'' },
                   {'name': 'Jana', 'surname': 'Novotná', 'date1':'22.06.2022','grade1':'F','date2':'04.07.2022','grade2':'C','date3':'28.07.2022','grade3':''}
+                  
               ]
+
+              
 
               setData(dataFromServer)
           }, [props.id]
@@ -211,6 +155,7 @@
       )
   }
 </script>
+
 <script type="text/babel">
   function App(props) {
       return (
